@@ -3,6 +3,8 @@
 Allow [CORS](http://www.w3.org/TR/cors/) for Express apps in the most permissive
 way. In other words, this middleware **ALLOWS ALL THE THINGS**.
 
+![](https://raw.githubusercontent.com/caike/permissive-cors/master/allthethings.png)
+
 ## Installation
 
 `npm install permissive-cors`
