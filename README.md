@@ -44,7 +44,7 @@ var corsMiddleware = cors();
 
 http.createServer(function (req, res) {
   corsMiddleware(req, res, function onDone() {
-    // your core here
+    // your code here
     res.end();
   });
 });
@@ -57,5 +57,5 @@ Run `npm test`
 
 ## Compatibility
 
-Tested in Chrome 36, Safari 7 and Firefox 30.  
+Tested in Chrome 36, Safari 7 and Firefox 30.
 For any bugs found, feel free to submit a PR.
