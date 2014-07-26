@@ -1,6 +1,5 @@
 var http = require('http');
 var cors = require('..');
-var should = require('should');
 var request = require('supertest');
 
 
