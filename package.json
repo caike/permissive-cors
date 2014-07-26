@@ -1,6 +1,6 @@
 {
   "name": "permissive-cors",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "CORS for Node HTTP in the most permissive way",
   "main": "index.js",
   "devDependencies": {
