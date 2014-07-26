@@ -43,7 +43,7 @@ describe('Permissive CORS', function () {
 
 });
 
-function createServer(format, opts, fn) {
+function createServer(){
   var middleware = cors();
 
   return http.createServer(function (req, res) {
