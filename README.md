@@ -1,5 +1,7 @@
 # Permissive CORS
 
+[![Build Status](https://secure.travis-ci.org/caike/permissive-cors.png)](http://travis-ci.org/caike/permissive-cors)
+
 Allows [CORS](http://www.w3.org/TR/cors/) for Node HTTP in the most permissive
 way.
 
