@@ -7,7 +7,7 @@ module.exports = function () {
     res.setHeader('Access-Control-Allow-Methods', req.headers['access-control-request-method']);
     // Allows any HTTP Request Header
     res.setHeader('Access-Control-Allow-Headers', req.headers['access-control-request-headers']);
-    // Respond righ away on pre-flight requests
+    // Respond right away on pre-flight requests
     if ('OPTIONS' == req.method) return res.end('', 200);
 
     next();
