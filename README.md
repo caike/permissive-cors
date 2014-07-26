@@ -54,3 +54,8 @@ http.createServer(function (req, res) {
 ## Tests
 
 Run `npm test`
+
+## Compatibility
+
+Tested in Chrome 36, Safari 7 and Firefox 30.  
+For any bugs found, feel free to submit a PR.
