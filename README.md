@@ -16,8 +16,6 @@ corresponding response headers. In other words, this middleware **ALLOWS ALL THE
 
 ## Example
 
-Just add it to the middleware stack.
-
 Example using Express:
 
 ```javascript
