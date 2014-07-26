@@ -1,7 +1,12 @@
 # Permissive CORS
 
-Allow [CORS](http://www.w3.org/TR/cors/) for Express apps in the most permissive
-way. In other words, this middleware **ALLOWS ALL THE THINGS**.
+Allows [CORS](http://www.w3.org/TR/cors/) for Node HTTP in the most permissive
+way.
+
+Any specific headers or HTTP verbs
+requested by client calls via **Access-Control-Request-Method** or
+**Access-Control-Request-Headers** will be automatically added to the
+corresponding response headers. In other words, this middleware **ALLOWS ALL THE THINGS**.
 
 ![](https://raw.githubusercontent.com/caike/permissive-cors/master/allthethings.png)
 
@@ -11,10 +16,9 @@ way. In other words, this middleware **ALLOWS ALL THE THINGS**.
 
 ## Example
 
-Just add it to the middleware stack. Any specific headers or HTTP verbs
-requested by client calls via **Access-Control-Request-Method** or
-**Access-Control-Request-Headers** will be automatically added to the
-corresponding response headers.
+Just add it to the middleware stack.
+
+Example using Express:
 
 ```javascript
 var express = require('express');
@@ -23,17 +27,30 @@ var app = express();
 var cors = require('permissive-cors');
 app.use(cors());
 
-app.get('/', function (req, res) {
+app.put('/', function (req, res) {
   //...
 });
-
-app.post('/', function (req, res) {
-  //...
-});
-
 app.delete('/', function (req, res) {
   //...
 });
-
-app.listen(8080);
 ```
+
+Example using Node HTTP:
+
+```javascript
+var http = request('http');
+var cors = require('permissive-cors');
+var corsMiddleware = cors();
+
+http.createServer(function (req, res) {
+  corsMiddleware(req, res, function onDone() {
+    // your core here
+    res.end();
+  });
+});
+
+```
+
+## Tests
+
+Run `npm test`
